@@ -5,7 +5,7 @@ This is a simple, zero dependancy, routing library that can be used with fastn t
 Clone this repo and run the example:
 
 ```bash
-git clone git@github.com:markwylde/router.git
+git clone git@github.com:markwylde/routering.git
 cd router
 npm install
 npm run start

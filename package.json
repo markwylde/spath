@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A router for fastn",
   "main": "index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/markwylde/routering.git"
+  },
   "scripts": {
     "build": "browserify ./example/index.js --noparse clone > example/index.bundle.js",
     "watch": "watchify -d -o example/index.bundle.js example/index.js",

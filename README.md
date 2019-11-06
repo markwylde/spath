@@ -1,5 +1,7 @@
-# Router
+# Routering
 This is a simple router build in fastn with zero dependancies
+
+Then use as 
 
 ## Getting started
 Clone this repo and run the example:
@@ -15,10 +17,15 @@ Then goto:
 http://localhost:8080
 
 ## Usage
+Install the library
+```bash
+npm i --save routering
+```
+
 Activate the router
 
 ```javascript
-const routeModule = require('...')
+const routeModule = require('routering')
 routeModule({
   defaultRoute: '/'
 }, route => {

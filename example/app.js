@@ -1,4 +1,3 @@
-const routering = require('../lib/index')
 const onUrlChange = require('on-url-change');
 
 module.exports = function(mutate){

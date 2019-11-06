@@ -1,7 +1,5 @@
 # Routering
-This is a simple router build in fastn with zero dependancies
-
-Then use as 
+This is a simple, zero dependancy, routing library that can be used with fastn to map the page location to a specific component.
 
 ## Getting started
 Clone this repo and run the example:

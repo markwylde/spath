@@ -16,10 +16,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "fastn": "^2.12.3",
-    "on-url-change": "^1.0.2"
   },
   "devDependencies": {
+    "fastn": "^2.12.3",
+    "on-url-change": "^1.0.2",
     "browserify": "^16.5.0",
     "node-static": "^0.7.11",
     "npm-run-all": "^4.1.5",

@@ -1,0 +1,24 @@
+body {
+  font-family: tahoma;
+}
+
+.menu li a:hover {
+  background-color: rgb(38, 38, 46);
+  color: rgb(239, 239, 255);
+}
+.menu li a {
+  display: inline-block;
+  background-color: rgb(239, 239, 255);
+  color: rgb(38, 38, 46);
+  border: 1px solid rgb(38, 38, 46);
+  padding: 10px;
+}
+.menu li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}

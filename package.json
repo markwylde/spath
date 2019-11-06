@@ -4,8 +4,8 @@
   "description": "A router for fastn",
   "main": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/markwylde/routering.git"
+    "type": "git",
+    "url": "https://github.com/markwylde/routering.git"
   },
   "scripts": {
     "build": "browserify ./example/index.js --noparse clone > example/index.bundle.js",
@@ -16,7 +16,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "fastn": "^2.12.3"
+    "fastn": "^2.12.3",
+    "on-url-change": "^1.0.2"
   },
   "devDependencies": {
     "browserify": "^16.5.0",

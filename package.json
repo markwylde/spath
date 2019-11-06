@@ -14,7 +14,7 @@
     "start": "npm-run-all --parallel watch serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "GPL-3.0",
+  "license": "MIT",
   "dependencies": {
     "fastn": "^2.12.3"
   },

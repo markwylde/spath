@@ -5,13 +5,13 @@ const fastn = require('fastn')({
   _generic: require('fastn/genericComponent')
 })
 
-const routeModule = require('../lib/index')
+const routering = require('../lib/index')
 
 const state = {
   route: window.location.pathname
 }
 
-routeModule({
+routering({
   defaultRoute: '/'
 }, route => {
   fastn.Model.set(state, 'route', route)

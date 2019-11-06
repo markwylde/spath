@@ -23,8 +23,8 @@ npm i --save routering
 Activate the router
 
 ```javascript
-const routeModule = require('routering')
-routeModule({
+const routering = require('routering')
+routering({
   defaultRoute: '/'
 }, route => {
   // This will be called anytime the route changes

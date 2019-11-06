@@ -2,6 +2,7 @@ body {
   font-family: tahoma;
 }
 
+.menu li.active a,
 .menu li a:hover {
   background-color: rgb(38, 38, 46);
   color: rgb(239, 239, 255);
@@ -12,6 +13,7 @@ body {
   color: rgb(38, 38, 46);
   border: 1px solid rgb(38, 38, 46);
   padding: 10px;
+  text-decoration: none;
 }
 .menu li {
   display: inline-block;

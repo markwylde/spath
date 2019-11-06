@@ -6,7 +6,7 @@ Clone this repo and run the example:
 
 ```bash
 git clone git@github.com:markwylde/routering.git
-cd router
+cd routering
 npm install
 npm run start
 ```

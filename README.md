@@ -4,7 +4,7 @@ Capture anchor clicks and do a pushState instead of navigating
 
 ## Example
 
-[Demo app](https://routering.render.com)
+[Demo app](https://spath.render.com)
 
 ## Why
 
@@ -34,7 +34,7 @@ spath.setPath('/some-path')
 
 ```bash
 git clone git@github.com:markwylde/spath.git
-cd routering
+cd spath
 npm install
 npm run start
 ```

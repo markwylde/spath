@@ -1,6 +1,6 @@
 {
   "name": "spath",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Capture anchor clicks and do a pushState instead of navigating",
   "main": "lib/index.js",
   "repository": {

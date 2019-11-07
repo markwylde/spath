@@ -1,4 +1,4 @@
-# Routering
+# Spath
 
 Capture anchor clicks and do a pushState instead of navigating
 
@@ -13,17 +13,17 @@ most SPA's need to capture default anchor behaviour and do a pushState, this mod
 ## Getting started
 
 ```bash
-npm i --save routering
+npm i --save spath
 ```
 
 ```js
-const routering = require('routering')
+const spath = require('spath')
 
 /* Capture all anchor clicks and instead to a pushState */
-document.addEventListener('click', routering.pushStateAnchors)
+document.addEventListener('click', spath.pushStateAnchors)
 
 /* To programmatically pushState */
-routering.setPath('/some-path')
+spath.setPath('/some-path')
 ```
 
 ## Detecting path change
@@ -33,7 +33,7 @@ routering.setPath('/some-path')
 ## Developing
 
 ```bash
-git clone git@github.com:markwylde/routering.git
+git clone git@github.com:markwylde/spath.git
 cd routering
 npm install
 npm run start

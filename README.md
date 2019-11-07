@@ -1,11 +1,39 @@
-# Routering
-This is a simple, zero dependancy, routing library that can be used with fastn to map the page location to a specific component.
+# Spath
+
+Capture anchor clicks and do a pushState instead of navigating
+
+## Example
+
+[Demo app](https://routering.render.com)
+
+## Why
+
+most SPA's need to capture default anchor behaviour and do a pushState, this module encaptulates that logic.
 
 ## Getting started
-Clone this repo and run the example:
 
 ```bash
-git clone git@github.com:markwylde/routering.git
+npm i --save spath
+```
+
+```js
+const spath = require('spath')
+
+/* Capture all anchor clicks and instead to a pushState */
+document.addEventListener('click', spath.pushStateAnchors)
+
+/* To programmatically pushState */
+spath.setPath('/some-path')
+```
+
+## Detecting path change
+
+[on-url-change](https://www.npmjs.com/package/on-url-change) can be used to detect when the page's URL has changed.
+
+## Developing
+
+```bash
+git clone git@github.com:markwylde/spath.git
 cd routering
 npm install
 npm run start
@@ -13,50 +41,6 @@ npm run start
 
 Then goto:
 http://localhost:8080
-
-## Usage
-Install the library
-```bash
-npm i --save routering
-```
-
-Activate the router
-
-```javascript
-const routering = require('routering')
-routering({
-  defaultRoute: '/'
-}, route => {
-  // This will be called anytime the route changes
-  fastn.Model.set(state, 'route', route)
-})
-```
-
-Define your route templater
-
-```javascript
-const ui = fastn('templater', {
-  data: fastn.binding('route'),
-  attachTemplates: false,
-  template: function (data) {
-    const route = data.get('item')
-
-    switch (route) {
-      case '/':
-        return homePage()
-
-      case '/second':
-        return secondPage()
-
-      case '/third':
-        return thirdPage()
-  
-      default:
-        return notFoundPage()
-    }
-  }
-})
-```
 
 ## License
 This project is licensed under the terms of the MIT license.

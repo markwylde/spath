@@ -1,11 +1,11 @@
 {
-  "name": "routering",
-  "version": "1.0.3",
-  "description": "A router for fastn",
+  "name": "spath",
+  "version": "1.0.0",
+  "description": "Capture anchor clicks and do a pushState instead of navigating",
   "main": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/markwylde/routering.git"
+    "type": "git",
+    "url": "https://github.com/markwylde/spath.git"
   },
   "scripts": {
     "build": "browserify ./example/index.js --noparse clone > example/index.bundle.js",
@@ -16,9 +16,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "fastn": "^2.12.3"
   },
   "devDependencies": {
+    "fastn": "^2.12.3",
+    "on-url-change": "^1.0.2",
     "browserify": "^16.5.0",
     "node-static": "^0.7.11",
     "npm-run-all": "^4.1.5",

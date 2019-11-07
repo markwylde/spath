@@ -2,7 +2,7 @@
   "name": "spath",
   "version": "1.0.0",
   "description": "Capture anchor clicks and do a pushState instead of navigating",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/markwylde/spath.git"

@@ -8,7 +8,7 @@ Capture anchor clicks and do a pushState instead of navigating
 
 ## Why
 
-most SPA's need to capture default anchor behaviour and do a pushState, this module encaptulates that logic.
+Most SPA's need to capture default anchor behaviour and do a pushState, this module encaptulates that logic.
 
 ## Getting started
 

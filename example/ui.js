@@ -1,8 +1,8 @@
-const routering = require('../lib/index')
+const spath = require('../lib/index')
 
 module.exports = function(fastn, state){
-  const setPath = routering.setPath
-  document.addEventListener('click', routering.pushStateAnchors)
+  const setPath = spath.setPath
+  document.addEventListener('click', spath.pushStateAnchors)
 
   const isActive = (test) =>
     fastn.binding('route', route => route === test && 'active')

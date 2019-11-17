@@ -4,7 +4,7 @@ Capture anchor clicks and do a pushState instead of navigating
 
 ## Example
 
-[Demo app](https://spath.render.com)
+[Demo app](https://spath.onrender.com)
 
 ## Why
 

@@ -3,7 +3,7 @@ const fastn = require('fastn')({
   list: require('fastn/listComponent'),
   templater: require('fastn/templaterComponent'),
   _generic: require('fastn/genericComponent')
-})
+});
 
-var app = require('./app')(fastn.Model)
-var ui = require('./ui')(fastn, app)
+const app = require('./app')(fastn.Model);
+require('./ui')(fastn, app);

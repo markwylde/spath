@@ -15,8 +15,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "fastn": "^2.12.3",
     "on-url-change": "^1.0.2",

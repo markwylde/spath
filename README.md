@@ -16,14 +16,17 @@ Most SPA's need to capture default anchor behaviour and do a pushState, this mod
 npm i --save spath
 ```
 
+### Exposes individually or wrapped
+
 ```js
-const spath = require('spath')
+const pushStateAnchors = require('spath/pushStateAnchors')
+const setPath = require('spath/setPath')
 
 /* Capture all anchor clicks and instead to a pushState */
-document.addEventListener('click', spath.pushStateAnchors)
+document.addEventListener('click', pushStateAnchors)
 
 /* To programmatically pushState */
-spath.setPath('/some-path')
+setPath('/some-path')
 ```
 
 ## Detecting path change

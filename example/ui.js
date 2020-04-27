@@ -17,6 +17,10 @@ module.exports = function (fastn, state) {
     fastn('li', { class: isActive('/third') },
       fastn('a', { href: '/third' }, 'Third')),
 
+    fastn('li', { class: isActive('/nested') },
+      fastn('a', { href: '/nested' },
+        fastn('span', 'Nested'))),
+
     fastn('li', { class: isActive('/missing') },
       fastn('a', { href: '/missing' }, 'Missing'))
   );
@@ -49,6 +53,13 @@ module.exports = function (fastn, state) {
       })
   );
 
+  const nestedPage = () => fastn('section',
+    fastn('h1', 'Nested Link Page'),
+    fastn('p',
+      'This is the nested link page. It\'s link content is nested in a span'
+    )
+  );
+
   const notFoundPage = () => fastn('section', 'Not Found');
 
   const pagesUi = () => fastn('templater', {
@@ -66,6 +77,9 @@ module.exports = function (fastn, state) {
 
         case '/third':
           return thirdPage();
+
+        case '/nested':
+          return nestedPage();
 
         default:
           return notFoundPage();

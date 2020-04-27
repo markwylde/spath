@@ -10,7 +10,7 @@ function pushStateAnchors (event) {
   
   if (href && !href.match(/.*?\/\//)) {
     event.preventDefault();
-    alert('yes')
+    setPath(href);
   }
 }
 

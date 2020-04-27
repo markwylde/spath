@@ -28,21 +28,21 @@ module.exports = function (fastn, state) {
   const homePage = () => fastn('section',
     fastn('h1', 'Home Page'),
     fastn('p',
-      'This is an example of using the router'
+      'This is an example of using the router.'
     )
   );
 
   const secondPage = () => fastn('section',
     fastn('h1', 'Second Page'),
     fastn('p',
-      'This is the second page'
+      'This is the second page.'
     )
   );
 
   const thirdPage = () => fastn('section',
     fastn('h1', 'Third Page'),
     fastn('p',
-      'This is the third page, it will navigate home after 3 seconds'
+      'This is the third page, it will navigate home after 3 seconds.'
     )
       .on('render', function () {
         setTimeout(() => {
@@ -56,7 +56,7 @@ module.exports = function (fastn, state) {
   const nestedPage = () => fastn('section',
     fastn('h1', 'Nested Link Page'),
     fastn('p',
-      'This is the nested link page. It\'s link content is nested in a span'
+      'This is the nested link page. It\'s link content is nested in a span.'
     )
   );
 

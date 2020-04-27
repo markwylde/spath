@@ -17,6 +17,10 @@ module.exports = function (fastn, state) {
     fastn('li', { class: isActive('/third') },
       fastn('a', { href: '/third' }, 'Third')),
 
+    fastn('li', { class: isActive('/nested') },
+      fastn('a', { href: '/nested' },
+        fastn('span', 'Nested'))),
+
     fastn('li', { class: isActive('/missing') },
       fastn('a', { href: '/missing' }, 'Missing'))
   );
@@ -24,21 +28,21 @@ module.exports = function (fastn, state) {
   const homePage = () => fastn('section',
     fastn('h1', 'Home Page'),
     fastn('p',
-      'This is an example of using the router'
+      'This is an example of using the router.'
     )
   );
 
   const secondPage = () => fastn('section',
     fastn('h1', 'Second Page'),
     fastn('p',
-      'This is the second page'
+      'This is the second page.'
     )
   );
 
   const thirdPage = () => fastn('section',
     fastn('h1', 'Third Page'),
     fastn('p',
-      'This is the third page, it will navigate home after 3 seconds'
+      'This is the third page, it will navigate home after 3 seconds.'
     )
       .on('render', function () {
         setTimeout(() => {
@@ -47,6 +51,13 @@ module.exports = function (fastn, state) {
           }
         }, 3000);
       })
+  );
+
+  const nestedPage = () => fastn('section',
+    fastn('h1', 'Nested Link Page'),
+    fastn('p',
+      'This is the nested link page. It\'s link content is nested in a span.'
+    )
   );
 
   const notFoundPage = () => fastn('section', 'Not Found');
@@ -66,6 +77,9 @@ module.exports = function (fastn, state) {
 
         case '/third':
           return thirdPage();
+
+        case '/nested':
+          return nestedPage();
 
         default:
           return notFoundPage();

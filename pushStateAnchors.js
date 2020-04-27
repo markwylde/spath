@@ -1,11 +1,16 @@
 const setPath = require('./setPath');
 
 function pushStateAnchors (event) {
-  const href = event.target.getAttribute('href');
+  const closestAnchor = event.target.closest('a');
+  if (!closestAnchor) {
+    return
+  }
 
+  const href = closestAnchor.getAttribute('href');
+  
   if (href && !href.match(/.*?\/\//)) {
     event.preventDefault();
-    setPath(href);
+    alert('yes')
   }
 }
 

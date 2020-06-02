@@ -17,6 +17,9 @@ module.exports = function (fastn, state) {
     fastn('li', { class: isActive('/third') },
       fastn('a', { href: '/third' }, 'Third')),
 
+    fastn('li',
+      fastn('a', { href: 'javascript:alert("hey there")' }, 'JS Test')),
+
     fastn('li', { class: isActive('/nested') },
       fastn('a', { href: '/nested' },
         fastn('span', 'Nested'))),

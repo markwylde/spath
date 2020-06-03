@@ -8,7 +8,7 @@ function pushStateAnchors (event) {
 
   const href = closestAnchor.getAttribute('href');
 
-  if (href && !href.match(/.*?\/\//) && !href.match(/^javascript\:/)) {
+  if (href && !href.match(/.*?\/\//) && !href.match(/^javascript:/)) {
     event.preventDefault();
     setPath(href);
   }

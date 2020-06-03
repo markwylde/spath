@@ -2,6 +2,8 @@ const setPath = require('../setPath');
 const pushStateAnchors = require('../pushStateAnchors');
 
 module.exports = function (fastn, state) {
+  setPath(window.location.pathname);
+
   document.addEventListener('click', pushStateAnchors);
 
   const isActive = (test) =>
@@ -19,6 +21,19 @@ module.exports = function (fastn, state) {
 
     fastn('li',
       fastn('a', { href: 'javascript:alert("hey there")' }, 'JS Test')),
+
+    fastn('li',
+      fastn('a', {
+        href: window.history.state && window.history.state.previousHref,
+        display: window.history.state
+      }, 'Back')
+        .on('click', (event) => {
+          if (!event.metaKey && !event.controlKey) {
+            event.preventDefault();
+            global.window.history.back();
+          }
+        })
+    ),
 
     fastn('li', { class: isActive('/nested') },
       fastn('a', { href: '/nested' },
@@ -73,25 +88,24 @@ module.exports = function (fastn, state) {
 
       switch (route) {
         case '/':
-          return homePage();
+          return fastn('div', links(), homePage());
 
         case '/second':
-          return secondPage();
+          return fastn('div', links(), secondPage());
 
         case '/third':
-          return thirdPage();
+          return fastn('div', links(), thirdPage());
 
         case '/nested':
-          return nestedPage();
+          return fastn('div', links(), nestedPage());
 
         default:
-          return notFoundPage();
+          return fastn('div', links(), notFoundPage());
       }
     }
   });
 
   const ui = fastn('div',
-    links(),
     pagesUi()
   );
 

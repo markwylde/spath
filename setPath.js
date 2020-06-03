@@ -1,6 +1,9 @@
 function setPath (path) {
   if (path !== window.location.pathname) {
-    window.history.pushState({ path }, document.title, path);
+    window.history.pushState({
+      previousHref: window.location.href,
+      path
+    }, document.title, path);
   }
 }
 

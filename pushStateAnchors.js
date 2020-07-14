@@ -1,17 +1,23 @@
 const setPath = require('./setPath');
 
-function pushStateAnchors (event) {
-  const closestAnchor = event.target.closest('a');
-  if (!closestAnchor) {
-    return;
-  }
+function defaultShouldCapture (href) {
+  return !href.match(/.*?\/\//);
+}
 
-  const href = closestAnchor.getAttribute('href');
+function pushStateAnchors (shouldCapture = defaultShouldCapture) {
+  return (event) => {
+    const closestAnchor = event.target.closest('a');
+    if (!closestAnchor) {
+      return;
+    }
 
-  if (href && !href.match(/.*?\/\//) && !href.match(/^javascript:/)) {
-    event.preventDefault();
-    setPath(href);
-  }
+    const href = closestAnchor.getAttribute('href');
+
+    if (href && !href.match(/^javascript:/) && shouldCapture(href)) {
+      event.preventDefault();
+      setPath(href);
+    }
+  };
 }
 
 module.exports = pushStateAnchors;

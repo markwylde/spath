@@ -23,7 +23,12 @@ const pushStateAnchors = require('spath/pushStateAnchors')
 const setPath = require('spath/setPath')
 
 /* Capture all anchor clicks and instead to a pushState */
-document.addEventListener('click', pushStateAnchors)
+document.addEventListener('click', pushStateAnchors())
+
+/* Custom capture logic */
+document.addEventListener('click', pushStateAnchors(href => {
+  return href.startsWith(window.location.origin)
+}))
 
 /* To programmatically pushState */
 setPath('/some-path')

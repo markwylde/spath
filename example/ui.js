@@ -4,7 +4,7 @@ const pushStateAnchors = require('../pushStateAnchors');
 module.exports = function (fastn, state) {
   setPath(window.location.pathname);
 
-  document.addEventListener('click', pushStateAnchors);
+  document.addEventListener('click', pushStateAnchors());
 
   const isActive = (test) =>
     fastn.binding('route', route => route === test && 'active');

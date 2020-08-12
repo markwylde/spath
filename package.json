@@ -10,7 +10,7 @@
   "scripts": {
     "build": "browserify ./example/index.js --noparse clone > example/index.bundle.js",
     "watch": "watchify -d -o example/index.bundle.js example/index.js",
-    "serve": "static ./example --spa index.html",
+    "serve": "static -a 0.0.0.0 ./example --spa index.html",
     "start": "npm-run-all --parallel watch serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -19,6 +19,9 @@ module.exports = function (fastn, state) {
     fastn('li', { class: isActive('/third') },
       fastn('a', { href: '/third' }, 'Third')),
 
+    fastn('li', { class: isActive('/new') },
+      fastn('a', { href: '/new', target: '_blank' }, 'New Page')),
+
     fastn('li',
       fastn('a', { href: 'javascript:alert("hey there")' }, 'JS Test')),
 
@@ -54,6 +57,13 @@ module.exports = function (fastn, state) {
     fastn('h1', 'Second Page'),
     fastn('p',
       'This is the second page.'
+    )
+  );
+
+  const newPage = () => fastn('section',
+    fastn('h1', 'New Page'),
+    fastn('p',
+      'This should have opened in a new page/tab.'
     )
   );
 
@@ -95,6 +105,9 @@ module.exports = function (fastn, state) {
 
         case '/third':
           return fastn('div', links(), thirdPage());
+
+        case '/new':
+          return fastn('div', links(), newPage());
 
         case '/nested':
           return fastn('div', links(), nestedPage());

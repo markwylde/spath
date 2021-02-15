@@ -12,8 +12,8 @@ function pushStateAnchors (shouldCapture = defaultShouldCapture) {
     }
 
     const href = closestAnchor.getAttribute('href');
-
-    if (href && !href.match(/^javascript:/) && shouldCapture(href)) {
+    const isTarget = closestAnchor && closestAnchor.getAttribute('target');
+    if (href && !isTarget && !href.match(/^javascript:/) && shouldCapture(href)) {
       event.preventDefault();
       setPath(href);
     }

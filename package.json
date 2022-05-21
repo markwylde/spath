@@ -10,17 +10,17 @@
   "scripts": {
     "build": "browserify ./example/index.js --noparse clone > example/index.bundle.js",
     "watch": "watchify -d -o example/index.bundle.js example/index.js",
-    "serve": "static -a 0.0.0.0 ./example --spa index.html",
+    "serve": "servatron -d ./example --spa index.html",
     "start": "npm-run-all --parallel watch serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "MIT",
   "devDependencies": {
-    "browserify": "^16.5.1",
-    "fastn": "^2.14.4",
-    "node-static": "^0.7.11",
+    "browserify": "^17.0.0",
+    "fastn": "^2.14.5",
     "npm-run-all": "^4.1.5",
     "on-url-change": "^1.0.2",
-    "watchify": "^3.11.1"
+    "servatron": "^2.3.1",
+    "watchify": "^4.0.0"
   }
 }
